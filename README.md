@@ -11,6 +11,7 @@ COSE362 기계학습 프로젝트 **Team K1** 코드 저장소입니다.
 - `src/`: Hamiltonian 처리, simulator wrapper, context feature, NSF 모델 등 재사용 코드
 - `scripts/main_model/`: FLOW 계열 최종 모델 학습, model-selection audit, inverse-design yield benchmark 스크립트
 - `scripts/context_ablation/`: context ablation, nearest-neighbor baseline, C1-C3 검토 스크립트
+- `scripts/final_report_experiments/`: 최종 발표자료의 dynamic-response diagnosis, local perturbation, condition descriptor 한계 분석 스크립트
 - `notebooks/main_model/`: Colab 실행용 주요 notebook
 - `results/main_model/`: FLOW, CNF, MIXPRIOR/HTBAL 계열 최종 모델 비교 결과 csv/json
 - `results/context_ablation/`: context ablation 및 claim 검토 결과 csv/json/png
@@ -134,6 +135,7 @@ target별로 보면 FLOW HTBRANCHPINNTRAJ는 fast-high와 very-fast target에서
 
 - `scripts/main_model/`: FLOW 계열 최종 모델 학습, model-selection audit, inverse-design yield benchmark
 - `scripts/context_ablation/`: context ablation 학습/평가 및 baseline 비교
+- `scripts/final_report_experiments/`: 최종 발표자료 2-6쪽의 진단 실험 코드
 - `scripts/diagnostics/`: modality, D-family separation, surrogate check 등 추가 진단 스크립트
 
 ### `notebooks/`
@@ -179,27 +181,20 @@ GPU 환경에서 실행할 경우, 사용하는 런타임에 맞는 PyTorch buil
 
 ## 대용량 데이터 파일
 
-GitHub 저장소에는 용량 문제로 raw dataset, generated sample `.npz`, model checkpoint를 포함하지 않았습니다. 다만 전체 재학습이나 일부 재검증을 하려면 아래 데이터 묶음이 필요합니다. 따라서 이 파일들은 별도 Google Drive 또는 외부 저장소로 제공하는 것을 전제로 합니다.
+GitHub 저장소에는 용량 문제로 raw dataset을 포함하지 않았습니다. 대용량 데이터 묶음은 repository 밖의 `dataset/` 폴더로 따로 정리했습니다. 
 
-대용량 데이터 묶음은 repository 밖의 `dataset/` 폴더로 따로 정리했습니다. 해당 폴더를 Google Drive에 업로드한 뒤 아래 줄에 링크만 붙이면 됩니다.
-
-- Google Drive dataset bundle: 링크를 여기에 붙여넣기
+- Google Drive dataset bundle: https://drive.google.com/drive/folders/15odknCEOtuv5BGfLg7SBWOlc4Y3qlmVy?usp=drive_link
 
 | 용도 | 필요한 파일 | 권장 배치 경로 | 비고 |
 | --- | --- | --- | --- |
-| 140k context ablation | `merged_h27_140k.npz` | `data/merged_h27_140k.npz` | context ablation, C1-C3 후속 분석, NSF baseline 학습에 사용 |
-| 62k prepared flow/D-family source | `prepared_flow_pilot_data_62k.npz` | `data/clustered_from_clean/source_npz/prepared_flow_pilot_data.npz` 또는 script argument로 지정 | 62k pilot Hamiltonian의 H27, structural feature, condition split 포함 |
-| D-family trajectory source | `pilot_raw_62k_lambda35.npz` | `outputs/pilot_sampling/pilot62000_t50_schema_v2_20260603_merged/pilot_raw.npz` 또는 script argument로 지정 | full trajectory 기반 D-family 분석용 원본. 약 1.8GB이므로 Drive 제공 권장 |
-| D-family compact traces | `dynamic_condition_mode_traces.npz` | `data/clustered_from_clean/dynamic_condition_modes_n1000/npz/dynamic_condition_mode_traces.npz` | representative dynamic mode trace 확인용 compact file. 현재 별도 묶음에는 원본 62k trajectory와 prepared file을 우선 포함 |
-| 최종 모델 학습/평가 prepared data | `h27_context_ablation_140k_cnf_prepared.npz` | `data/h27_context_ablation_140k_cnf_prepared.npz` | `scripts/main_model/*benchmark*` 및 model-selection audit 계열에서 기대하는 prepared dataset |
-| 최종 모델 generated samples | `*_generated_samples.npz` | `temp/h27_drive_model_artifacts/` 또는 각 script의 `--generated-npz` 경로 | exact simulator validation이 끝난 generated sample 비교용 |
-| model checkpoint | `*.pt`, `*.pth`, `*.ckpt` | `outputs/training/` 또는 각 script의 `--checkpoint` 경로 | 재학습 없이 generate/evaluate할 때 필요 |
+| 140k Hamiltonian/context dataset | `merged_h27_140k.npz` | `data/merged_h27_140k.npz` | context ablation, original claim validation, NSF baseline 학습에 사용 |
+| 62k trajectory dataset | `pilot_raw_62k_lambda35.npz` | `outputs/pilot_sampling/pilot62000_t50_schema_v2_20260603_merged/pilot_raw.npz` | lambda=35에서 생성한 full trajectory 기반 데이터. D-family/dynamic analysis의 원본 |
 
-현재 repository에 포함된 `reports/`, `results/`의 csv/json/png 파일은 위 대용량 파일에서 계산된 compact evidence입니다. 따라서 보고서의 핵심 수치와 그림은 repository 안에서 확인할 수 있지만, 전체 데이터 생성부터 재학습까지 완전히 반복하려면 위 대용량 파일이 추가로 필요합니다.
+현재 repository에 포함된 `reports/`, `results/`의 csv/json/png 파일은 위 데이터셋에서 계산된 compact evidence입니다. 따라서 보고서의 핵심 수치와 그림은 repository 안에서 확인할 수 있고, raw data 수준에서 다시 분석하려면 위 두 데이터 파일을 추가로 받아 배치하면 됩니다.
 
 ## 확인 및 부분 재현 순서
 
-전체 raw dataset과 checkpoint는 용량 문제로 포함하지 않았기 때문에, 이 저장소는 다음 두 방식으로 확인하는 것을 권장합니다.
+전체 raw dataset은 용량 문제로 포함하지 않았기 때문에, 이 저장소는 다음 두 방식으로 확인하는 것을 권장합니다.
 
 1. 결과 검토: `reports/`, `results/`, `docs/`의 compact evidence를 읽어 최종 결론과 수치를 확인합니다.
 2. 코드 검토: `src/`와 `scripts/`에서 학습, 평가, 진단 실험이 어떤 방식으로 구성되었는지 확인합니다.
@@ -220,7 +215,6 @@ GitHub 저장소에는 용량 문제로 raw dataset, generated sample `.npz`, mo
 GitHub 저장소가 과도하게 커지는 것을 막기 위해 다음 파일은 제외했습니다.
 
 - raw `.npz` dataset
-- model checkpoint (`.pt`, `.pth`, `.ckpt`)
 - virtual environment 및 cache folder
 - 중복 archive 파일
 - 임시 local output

@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local notebooks/runtime artifacts
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Large datasets and generated artifacts
+data/
+outputs/
+temp/
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+
+# Local archives and copied bundles
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# Local logs
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
