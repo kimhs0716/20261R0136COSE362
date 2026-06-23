@@ -181,12 +181,16 @@ GPU 환경에서 실행할 경우, 사용하는 런타임에 맞는 PyTorch buil
 
 GitHub 저장소에는 용량 문제로 raw dataset, generated sample `.npz`, model checkpoint를 포함하지 않았습니다. 다만 전체 재학습이나 일부 재검증을 하려면 아래 데이터 묶음이 필요합니다. 따라서 이 파일들은 별도 Google Drive 또는 외부 저장소로 제공하는 것을 전제로 합니다.
 
+대용량 데이터 묶음은 repository 밖의 `dataset/` 폴더로 따로 정리했습니다. 해당 폴더를 Google Drive에 업로드한 뒤 아래 줄에 링크만 붙이면 됩니다.
+
+- Google Drive dataset bundle: 링크를 여기에 붙여넣기
+
 | 용도 | 필요한 파일 | 권장 배치 경로 | 비고 |
 | --- | --- | --- | --- |
 | 140k context ablation | `merged_h27_140k.npz` | `data/merged_h27_140k.npz` | context ablation, C1-C3 후속 분석, NSF baseline 학습에 사용 |
-| 62k prepared flow/D-family source | `prepared_flow_pilot_data.npz` | `data/clustered_from_clean/source_npz/prepared_flow_pilot_data.npz` | 62k pilot Hamiltonian의 H27, structural feature, condition split 포함 |
-| D-family trajectory source | `pilot_raw.npz` 또는 precomputed dynamic cache | `outputs/pilot_sampling/pilot62000_t50_schema_v2_20260603_merged/pilot_raw.npz` | full trajectory 기반 D-family 분석용 원본. 약 1.8GB이므로 Drive 제공 권장 |
-| D-family compact traces | `dynamic_condition_mode_traces.npz` | `data/clustered_from_clean/dynamic_condition_modes_n1000/npz/dynamic_condition_mode_traces.npz` | representative dynamic mode trace 확인용 compact file |
+| 62k prepared flow/D-family source | `prepared_flow_pilot_data_62k.npz` | `data/clustered_from_clean/source_npz/prepared_flow_pilot_data.npz` 또는 script argument로 지정 | 62k pilot Hamiltonian의 H27, structural feature, condition split 포함 |
+| D-family trajectory source | `pilot_raw_62k_lambda35.npz` | `outputs/pilot_sampling/pilot62000_t50_schema_v2_20260603_merged/pilot_raw.npz` 또는 script argument로 지정 | full trajectory 기반 D-family 분석용 원본. 약 1.8GB이므로 Drive 제공 권장 |
+| D-family compact traces | `dynamic_condition_mode_traces.npz` | `data/clustered_from_clean/dynamic_condition_modes_n1000/npz/dynamic_condition_mode_traces.npz` | representative dynamic mode trace 확인용 compact file. 현재 별도 묶음에는 원본 62k trajectory와 prepared file을 우선 포함 |
 | 최종 모델 학습/평가 prepared data | `h27_context_ablation_140k_cnf_prepared.npz` | `data/h27_context_ablation_140k_cnf_prepared.npz` | `scripts/main_model/*benchmark*` 및 model-selection audit 계열에서 기대하는 prepared dataset |
 | 최종 모델 generated samples | `*_generated_samples.npz` | `temp/h27_drive_model_artifacts/` 또는 각 script의 `--generated-npz` 경로 | exact simulator validation이 끝난 generated sample 비교용 |
 | model checkpoint | `*.pt`, `*.pth`, `*.ckpt` | `outputs/training/` 또는 각 script의 `--checkpoint` 경로 | 재학습 없이 generate/evaluate할 때 필요 |
