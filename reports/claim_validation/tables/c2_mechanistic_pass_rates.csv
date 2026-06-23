@@ -1,0 +1,6 @@
+group,n,bath_pass,deloc_pass,joint_pass
+all,140000,25.0,25.0,6.6
+high eta,19194,22.2,70.2,16.2
+non-high,96559,25.7,10.7,3.4
+top 10%,14000,21.8,73.3,16.6
+bottom 50%,70000,25.9,6.7,2.3

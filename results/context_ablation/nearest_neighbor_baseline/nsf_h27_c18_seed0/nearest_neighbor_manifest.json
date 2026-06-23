@@ -1,0 +1,31 @@
+{
+  "run_name": "nsf_h27_c18_seed0",
+  "context": "c18",
+  "context_dim": 18,
+  "context_names": [
+    "eta",
+    "tau_transfer",
+    "ipr",
+    "purity",
+    "c_l1",
+    "source_final_pop",
+    "sink_final_pop",
+    "rest_final_pop_sorted_0",
+    "rest_final_pop_sorted_1",
+    "rest_final_pop_sorted_2",
+    "rest_final_pop_sorted_3",
+    "rest_final_pop_sorted_4",
+    "sink_max_pop",
+    "sink_argmax_time",
+    "c_l1_max",
+    "c_l1_argmax_time",
+    "purity_final",
+    "ipr_final"
+  ],
+  "target_split": "val",
+  "n_targets": 1000,
+  "dataset": "data\\merged_h27_140k.npz",
+  "training_best_epoch": 123,
+  "training_best_val": 19.442337193080355,
+  "nearest_neighbor_pool": "training split from checkpoint stats"
+}

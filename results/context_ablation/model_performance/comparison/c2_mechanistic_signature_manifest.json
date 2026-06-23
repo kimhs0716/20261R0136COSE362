@@ -1,0 +1,24 @@
+{
+  "data": "data\\merged_h27_140k.npz",
+  "n_samples": 140000,
+  "eta_high": 0.95,
+  "eta_nonhigh": 0.85,
+  "bath_score_definition": "max normalized Drude-Lorentz bath spectrum over all eigenvalue gaps",
+  "deloc_score_definition": "max harmonic mean of site1 and site3 eigenstate weights",
+  "strict_thresholds": {
+    "bath_pass": "bath_score >= dataset 75th percentile",
+    "deloc_pass": "deloc_score >= dataset 75th percentile",
+    "bath_threshold": 0.9996497631072998,
+    "deloc_threshold": 0.08089032769203186
+  },
+  "loose_deloc_threshold": "at least one eigenstate has both site1 and site3 weights >= 0.05",
+  "strong_c2_necessary_condition_supported": false,
+  "weak_c2_enrichment_over_all": 0.0961461863082213,
+  "outputs": {
+    "summary_csv": "c2_mechanistic_signature_summary.csv",
+    "scores_csv": "c2_mechanistic_signature_scores.csv",
+    "pass_rate_figure": "c2_signature_pass_rates.png",
+    "scatter_figure": "c2_score_scatter_eta.png",
+    "eta_boxplot": "c2_eta_by_joint_signature.png"
+  }
+}

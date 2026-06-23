@@ -1,0 +1,3 @@
+model,n_budget_total,n_target_match_total,target_match_per_budget_mean,target_match_per_budget_min,target_and_support_p90_yield_mean,target_and_support_p90_yield_min,target_and_support_p95_yield_mean,support_p90_fraction_all_mean,nearest_train_norm_p90_mean
+FLOW_HTBRANCHPINNTRAJ,1536,1023,0.666015625,0.556640625,0.4264322916666667,0.380859375,0.4700520833333333,0.619140625,3.026421864827475
+HTBAL_CNF_MIXPRIOR,1536,990,0.64453125,0.61328125,0.4908854166666667,0.44140625,0.556640625,0.7747395833333334,0.8967643757661184

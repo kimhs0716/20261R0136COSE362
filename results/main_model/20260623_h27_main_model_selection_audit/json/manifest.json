@@ -1,0 +1,39 @@
+{
+  "assignments": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/temp/h27_dynamic_distance_diversity_audit_drive/dynamic_distance_assignments.csv",
+  "prepared_npz": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/data/h27_context_ablation_140k_cnf_prepared.npz",
+  "out_dir": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_main_model_selection_audit",
+  "targets": [
+    "fast_high",
+    "late_high",
+    "very_fast"
+  ],
+  "models": {
+    "HTBAL_CNF_MIXPRIOR": {
+      "run_label": "20260622_h27_cnf_mode_prior/full",
+      "condition_set": "CFAST_ORANGE3_HTBAL_CNF_MIXPRIOR",
+      "generated_npz": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/temp/h27_drive_model_artifacts/CFAST_ORANGE3_HTBAL_CNF_MIXPRIOR_generated_samples.npz",
+      "key_prefix": "CFAST_ORANGE3_HTBAL_CNF_MIXPRIOR_"
+    },
+    "FLOW_HTBRANCHPINNTRAJ": {
+      "run_label": "20260622_h27_flow_htbranchpinntraj/full",
+      "condition_set": "CFAST_ORANGE3_FLOW_HTBRANCHPINNTRAJ",
+      "generated_npz": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/temp/h27_drive_model_artifacts/CFAST_ORANGE3_FLOW_HTBRANCHPINNTRAJ_generated_samples.npz",
+      "key_prefix": "CFAST_ORANGE3_FLOW_HTBRANCHPINNTRAJ_"
+    }
+  },
+  "heldout_nearest_train_calibration": {
+    "heldout_n": 4096,
+    "heldout_p10": 0.3690349757671356,
+    "heldout_p50": 0.5088863968849182,
+    "heldout_p75": 0.6209594011306763,
+    "heldout_p90": 0.7460792064666748,
+    "heldout_p95": 0.8351667523384094
+  },
+  "outputs": {
+    "per_sample": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_main_model_selection_audit/csv/support_filtered_per_sample.csv",
+    "per_target": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_main_model_selection_audit/csv/support_filtered_yield_per_target.csv",
+    "aggregate": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_main_model_selection_audit/csv/support_filtered_yield_aggregate.csv",
+    "selection_matrix": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_main_model_selection_audit/csv/main_model_selection_matrix.csv",
+    "report": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_main_model_selection_audit/reports/main_model_selection_audit_kr.md"
+  }
+}

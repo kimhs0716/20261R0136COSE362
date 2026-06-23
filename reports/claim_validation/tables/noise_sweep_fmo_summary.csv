@@ -1,0 +1,8 @@
+lambda_reorg,eta50,coherence_ratio
+0,0.479,1.0
+5,0.988,nan
+15,0.993,nan
+35,0.994,0.3
+70,0.992,nan
+140,0.986,nan
+280,0.944,nan

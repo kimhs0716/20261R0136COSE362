@@ -1,0 +1,25 @@
+{
+  "assignments": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/temp/h27_dynamic_distance_diversity_audit_drive/dynamic_distance_assignments.csv",
+  "success_recheck": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/temp/h27_dynamic_distance_diversity_audit_drive/dynamic_distance_success_only_recheck.csv",
+  "scalable_dir": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260622_h27_scalable_reference_diversity_audit/csv",
+  "prepared_npz": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/data/h27_context_ablation_140k_cnf_prepared.npz",
+  "generated_h_npzs": {
+    "HTBAL_CNF_MIXPRIOR": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/temp/h27_drive_model_artifacts/CFAST_ORANGE3_HTBAL_CNF_MIXPRIOR_generated_samples.npz",
+    "FLOW_HTBRANCHPINNTRAJ": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/temp/h27_drive_model_artifacts/CFAST_ORANGE3_FLOW_HTBRANCHPINNTRAJ_generated_samples.npz"
+  },
+  "out_dir": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_inverse_design_yield_benchmark",
+  "targets": [
+    "fast_high",
+    "late_high",
+    "very_fast"
+  ],
+  "nominal_budget_per_target": 512,
+  "outputs": {
+    "per_target_all": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_inverse_design_yield_benchmark/csv/inverse_design_yield_per_target_all_models.csv",
+    "aggregate_all": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_inverse_design_yield_benchmark/csv/inverse_design_yield_aggregate_all_models.csv",
+    "per_target_core": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_inverse_design_yield_benchmark/csv/inverse_design_yield_per_target_core_models.csv",
+    "aggregate_core": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_inverse_design_yield_benchmark/csv/inverse_design_yield_aggregate_core_models.csv",
+    "hspace_novelty": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_inverse_design_yield_benchmark/csv/hspace_nearest_train_novelty_core_models.csv",
+    "report": "/home/codingcat/code/ai/FMO_Hemiltionian/fmo_research_clean/outputs/experiments/20260623_h27_inverse_design_yield_benchmark/reports/inverse_design_yield_benchmark_kr.md"
+  }
+}

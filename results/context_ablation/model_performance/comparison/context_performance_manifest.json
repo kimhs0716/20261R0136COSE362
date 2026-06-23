@@ -1,0 +1,15 @@
+{
+  "runs": [
+    "nsf_h27_c5_seed0",
+    "nsf_h27_c12_seed0",
+    "nsf_h27_c18_seed0",
+    "nsf_h27_c25_seed0",
+    "nsf_h27_c26_seed0",
+    "nsf_h27_c33_seed0"
+  ],
+  "target_split": "val",
+  "outputs": {
+    "by_metric": "outputs/model_performance/comparison/context_performance_by_metric.csv",
+    "summary": "outputs/model_performance/comparison/context_performance_summary.csv"
+  }
+}

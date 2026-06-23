@@ -1,0 +1,73 @@
+{
+  "assignment_path": "data\\clustered_from_clean\\scalable_mode_clustering\\csv\\dynamic_family_assignments.csv",
+  "model_performance_dir": "outputs\\model_performance",
+  "nearest_neighbor_dir": "outputs\\nearest_neighbor_baseline",
+  "coverage_note": "D/S labels are available only for the 62k clean subset; only covered validation targets are analyzed.",
+  "coverage_by_context": [
+    {
+      "run_name": "nsf_h27_c5_seed0",
+      "context": "c5",
+      "n_targets": 1000,
+      "n_targets_with_dynamic_label": 453,
+      "coverage_fraction": 0.453,
+      "min_covered_dataset_index": 172,
+      "max_covered_dataset_index": 61784
+    },
+    {
+      "run_name": "nsf_h27_c12_seed0",
+      "context": "c12",
+      "n_targets": 1000,
+      "n_targets_with_dynamic_label": 453,
+      "coverage_fraction": 0.453,
+      "min_covered_dataset_index": 172,
+      "max_covered_dataset_index": 61784
+    },
+    {
+      "run_name": "nsf_h27_c18_seed0",
+      "context": "c18",
+      "n_targets": 1000,
+      "n_targets_with_dynamic_label": 453,
+      "coverage_fraction": 0.453,
+      "min_covered_dataset_index": 172,
+      "max_covered_dataset_index": 61784
+    },
+    {
+      "run_name": "nsf_h27_c25_seed0",
+      "context": "c25",
+      "n_targets": 1000,
+      "n_targets_with_dynamic_label": 453,
+      "coverage_fraction": 0.453,
+      "min_covered_dataset_index": 172,
+      "max_covered_dataset_index": 61784
+    },
+    {
+      "run_name": "nsf_h27_c26_seed0",
+      "context": "c26",
+      "n_targets": 1000,
+      "n_targets_with_dynamic_label": 453,
+      "coverage_fraction": 0.453,
+      "min_covered_dataset_index": 172,
+      "max_covered_dataset_index": 61784
+    },
+    {
+      "run_name": "nsf_h27_c33_seed0",
+      "context": "c33",
+      "n_targets": 1000,
+      "n_targets_with_dynamic_label": 453,
+      "coverage_fraction": 0.453,
+      "min_covered_dataset_index": 172,
+      "max_covered_dataset_index": 61784
+    }
+  ],
+  "outputs": {
+    "coverage": "coverage_by_context.csv",
+    "metric_summary": "d_family_metric_summary.csv",
+    "overall_summary": "d_family_overall_summary.csv",
+    "markdown": "d_family_model_performance_summary.md",
+    "figures": {
+      "reduction_vs_random": "figures\\d_family_reduction_vs_random_heatmap.png",
+      "win_vs_nn": "figures\\d_family_win_vs_nearest_neighbor_heatmap.png",
+      "family_profile": "figures\\d_family_coverage_and_eta_profile.png"
+    }
+  }
+}

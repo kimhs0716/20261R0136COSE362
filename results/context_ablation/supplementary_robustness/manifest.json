@@ -1,0 +1,22 @@
+{
+  "seed": 716,
+  "d_permutations": 2000,
+  "inputs": {
+    "mechanistic_scores": "outputs\\model_performance\\comparison\\c2_mechanistic_signature_scores.csv",
+    "bath_sensitivity_scores": "outputs\\c2_bath_sensitivity\\c2_bath_sensitivity_scores.csv",
+    "dynamic_assignments": "data\\clustered_from_clean\\scalable_mode_clustering\\csv\\dynamic_family_assignments.csv",
+    "model_performance_dir": "outputs\\model_performance"
+  },
+  "outputs": {
+    "c2_threshold_sweep": "c2_threshold_sweep.csv",
+    "c2_score_auc": "c2_score_auc.csv",
+    "d_family_error_heterogeneity": "d_family_error_heterogeneity.csv",
+    "d_family_model_error_by_metric": "d_family_model_error_by_metric.csv",
+    "summary": "supplementary_robustness_summary.md",
+    "figures": {
+      "c2_threshold": "figures\\c2_threshold_sweep_enrichment.png",
+      "c2_auc": "figures\\c2_score_auc.png",
+      "d_heterogeneity": "figures\\d_family_error_heterogeneity.png"
+    }
+  }
+}

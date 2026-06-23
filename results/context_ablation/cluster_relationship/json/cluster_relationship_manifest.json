@@ -1,0 +1,27 @@
+{
+  "scope": "global_D000_D012_only",
+  "inputs": {
+    "global_assignments": "data/clustered_from_clean/scalable_mode_clustering/csv/dynamic_family_assignments.csv",
+    "dynamic_family_summary": "data/clustered_from_clean/scalable_mode_clustering/csv/dynamic_family_summary.csv",
+    "structural_mode_summary": "data/clustered_from_clean/scalable_mode_clustering/csv/structural_mode_summary.csv",
+    "dynamic_structural_cross_tab": "data/clustered_from_clean/scalable_mode_clustering/csv/dynamic_structural_cross_tab.csv",
+    "mode_stability_summary": "data/clustered_from_clean/scalable_mode_clustering/csv/mode_stability_summary.csv",
+    "dynamic_structural_submode_summary": "data/clustered_from_clean/scalable_mode_clustering/csv/dynamic_structural_submode_summary.csv"
+  },
+  "outputs": {
+    "d_global_profile_summary": "outputs/cluster_relationship/csv/d_global_profile_summary.csv",
+    "d_global_stability_summary": "outputs/cluster_relationship/csv/d_global_stability_summary.csv",
+    "sd_global_association_summary": "outputs/cluster_relationship/csv/sd_global_association_summary.csv",
+    "sd_global_group_association_summary": "outputs/cluster_relationship/csv/sd_global_group_association_summary.csv",
+    "s_global_to_d_global_prediction": "outputs/cluster_relationship/csv/s_global_to_d_global_prediction.csv",
+    "d_global_s_global_submode_summary": "outputs/cluster_relationship/csv/d_global_s_global_submode_summary.csv"
+  },
+  "row_counts": {
+    "d_global_families": 13,
+    "stability_rows": 6,
+    "sd_overall_rows": 1,
+    "sd_groupwise_rows": 4,
+    "prediction_rows": 2,
+    "submode_rows": 395
+  }
+}

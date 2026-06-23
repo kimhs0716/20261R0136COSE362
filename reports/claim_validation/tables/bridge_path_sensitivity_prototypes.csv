@@ -1,0 +1,10 @@
+pair,role,alpha,lambda35_eta20,best_eta20,best_source_sink_mix,residual_at_20ps
+D009/S000 -> D012/S000,high-high stable control,0.0,0.923,0.947,0.277,0.073
+D009/S000 -> D012/S000,high-high stable control,0.5,0.938,0.978,0.414,0.059
+D009/S000 -> D012/S000,high-high stable control,1.0,0.962,0.99,0.471,0.036
+D001/S002 -> D004/S002,low-to-high gradient,0.0,0.052,0.185,0.08,0.929
+D001/S002 -> D004/S002,low-to-high gradient,0.5,0.215,0.275,0.094,0.768
+D001/S002 -> D004/S002,low-to-high gradient,1.0,0.541,0.691,0.142,0.446
+D002/S002 -> D011/S002,mid-bridge valley prototype,0.0,0.377,0.734,0.234,0.608
+D002/S002 -> D011/S002,mid-bridge valley prototype,0.5,0.016,0.091,0.091,0.964
+D002/S002 -> D011/S002,mid-bridge valley prototype,1.0,0.535,0.684,0.086,0.451

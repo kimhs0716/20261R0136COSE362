@@ -1,0 +1,6 @@
+feature_set,n_features,n_train,n_test,positive_rate_test,roc_auc,average_precision,balanced_accuracy_at_0_5,features
+bath only,1,92602,23151,0.1658243704375621,0.544586254791825,0.19293139501172002,0.5301070284847463,bath_score
+deloc only,1,92602,23151,0.1658243704375621,0.9027902311513998,0.6099284253541631,0.7922920704590073,deloc_score
+bath + deloc,2,92602,23151,0.1658243704375621,0.9000161022368217,0.6139451003109978,0.7963868849290832,"bath_score, deloc_score"
+bath x coupling x path,1,92602,23151,0.1658243704375621,0.8738668546528856,0.4675259917797882,0.7466485483006677,bath_x_coupling_x_path_score
+all C2 scores,8,92602,23151,0.1658243704375621,0.9199118334418505,0.7577476476768142,0.8343508486680005,"bath_score, deloc_score, source_weight_at_best, sink_weight_at_best, loose_deloc_state_count, bath_x_coupling_score, bath_x_path_score, bath_x_coupling_x_path_score"

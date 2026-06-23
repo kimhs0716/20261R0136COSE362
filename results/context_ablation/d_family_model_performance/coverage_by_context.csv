@@ -1,0 +1,7 @@
+run_name,context,n_targets,n_targets_with_dynamic_label,coverage_fraction,min_covered_dataset_index,max_covered_dataset_index
+nsf_h27_c5_seed0,c5,1000,453,0.453,172,61784
+nsf_h27_c12_seed0,c12,1000,453,0.453,172,61784
+nsf_h27_c18_seed0,c18,1000,453,0.453,172,61784
+nsf_h27_c25_seed0,c25,1000,453,0.453,172,61784
+nsf_h27_c26_seed0,c26,1000,453,0.453,172,61784
+nsf_h27_c33_seed0,c33,1000,453,0.453,172,61784

@@ -1,0 +1,18 @@
+{
+  "eta_high": 0.95,
+  "eta_nonhigh": 0.85,
+  "bootstrap": 5000,
+  "seed": 716,
+  "input_scores": {
+    "mechanistic": "outputs\\model_performance\\comparison\\c2_mechanistic_signature_scores.csv",
+    "bath_sensitivity": "outputs\\c2_bath_sensitivity\\c2_bath_sensitivity_scores.csv"
+  },
+  "outputs": {
+    "summary": "c2_signature_enrichment.csv",
+    "markdown": "c2_signature_statistics_summary.md",
+    "figures": {
+      "enrichment_forest": "figures\\c2_signature_enrichment_forest.png",
+      "pass_rates": "figures\\c2_signature_pass_rate_comparison.png"
+    }
+  }
+}

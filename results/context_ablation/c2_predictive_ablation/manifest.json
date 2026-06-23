@@ -1,0 +1,15 @@
+{
+  "eta_high": 0.95,
+  "eta_nonhigh": 0.85,
+  "seed": 716,
+  "test_size": 0.2,
+  "inputs": {
+    "mechanistic_scores": "outputs\\model_performance\\comparison\\c2_mechanistic_signature_scores.csv",
+    "bath_sensitivity_scores": "outputs\\c2_bath_sensitivity\\c2_bath_sensitivity_scores.csv"
+  },
+  "outputs": {
+    "results": "c2_predictive_ablation.csv",
+    "summary": "c2_predictive_ablation_summary.md",
+    "figure": "figures/c2_predictive_ablation.png"
+  }
+}

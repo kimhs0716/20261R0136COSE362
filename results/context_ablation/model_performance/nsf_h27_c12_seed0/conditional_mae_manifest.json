@@ -1,0 +1,26 @@
+{
+  "run_name": "nsf_h27_c12_seed0",
+  "context": "c12",
+  "context_dim": 12,
+  "context_names": [
+    "eta",
+    "tau_transfer",
+    "ipr",
+    "purity",
+    "c_l1",
+    "eig_sorted_0",
+    "eig_sorted_1",
+    "eig_sorted_2",
+    "eig_sorted_3",
+    "eig_sorted_4",
+    "eig_sorted_5",
+    "eig_sorted_6"
+  ],
+  "target_split": "val",
+  "target_pool_size": 14000,
+  "n_targets": 1000,
+  "workers": 6,
+  "seed": 716,
+  "training_best_epoch": 203,
+  "training_best_val": 15.70259765625
+}

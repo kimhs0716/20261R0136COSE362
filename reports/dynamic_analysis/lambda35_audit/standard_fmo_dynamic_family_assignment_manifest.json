@@ -1,0 +1,16 @@
+{
+  "raw_path": "fmo_research_clean\\outputs\\pilot_sampling\\pilot62000_t50_schema_v2_20260603_merged\\pilot_raw.npz",
+  "prepared_path": "FMO_H27_context_ablation\\data\\clustered_from_clean\\source_npz\\prepared_flow_pilot_data.npz",
+  "assignments_path": "FMO_H27_context_ablation\\data\\clustered_from_clean\\scalable_mode_clustering\\csv\\dynamic_family_assignments.csv",
+  "summary_path": "FMO_H27_context_ablation\\data\\clustered_from_clean\\scalable_mode_clustering\\csv\\dynamic_family_summary.csv",
+  "feature_dim": 472,
+  "downsample_stride": 4,
+  "nearest_family_by_centroid": "D003",
+  "nearest_family_by_centroid_distance": 8.402226448059082,
+  "nearest_family_by_member": "D003",
+  "nearest_member_distance": 2.6141483783721924,
+  "outputs": {
+    "family_assignment": "dynamic_diversity_audit_lambda35\\tables\\standard_fmo_dynamic_family_assignment.csv",
+    "fmo_metrics": "dynamic_diversity_audit_lambda35\\tables\\standard_fmo_dynamic_metrics.csv"
+  }
+}

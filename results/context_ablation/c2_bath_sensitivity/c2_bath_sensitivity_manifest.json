@@ -1,0 +1,18 @@
+{
+  "data": "data\\merged_h27_140k.npz",
+  "n_samples": 140000,
+  "eta_high": 0.95,
+  "eta_nonhigh": 0.85,
+  "metrics": {
+    "spectral_only": "max normalized Drude-Lorentz bath spectrum over all eigenvalue gaps",
+    "bath_x_coupling": "max spectrum score times uncorrelated site-bath transition coupling between eigenstates",
+    "bath_x_path": "max spectrum score times source-sink participation of the eigenstate pair",
+    "bath_x_coupling_x_path": "max spectrum score times both transition coupling and source-sink path relevance"
+  },
+  "threshold": "per-metric dataset 75th percentile",
+  "outputs": {
+    "summary_csv": "c2_bath_sensitivity_summary.csv",
+    "scores_csv": "c2_bath_sensitivity_scores.csv",
+    "pass_rate_figure": "c2_bath_sensitivity_pass_rates.png"
+  }
+}

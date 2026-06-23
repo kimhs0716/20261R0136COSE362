@@ -1,0 +1,8 @@
+source,metric,auc_high_eta_vs_nonhigh,n_high,n_nonhigh
+original_mechanistic_signature,bath_resonance_original,0.45890731923564243,19194,96559
+original_mechanistic_signature,source_sink_delocalization,0.9015823558136358,19194,96559
+original_mechanistic_signature,strict_joint_rank_score,0.6585368039939425,19194,96559
+bath_sensitivity_variants,spectral_only,0.45890731923564243,19194,96559
+bath_sensitivity_variants,bath_x_coupling,0.4965531860564496,19194,96559
+bath_sensitivity_variants,bath_x_path,0.5097203464017516,19194,96559
+bath_sensitivity_variants,bath_x_coupling_x_path,0.8734423498624989,19194,96559

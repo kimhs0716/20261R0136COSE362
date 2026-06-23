@@ -1,0 +1,9 @@
+criterion,HTBAL_CNF_MIXPRIOR,FLOW_HTBRANCHPINNTRAJ,reading
+exact-high target-match mean,0.64453125,0.666015625,FLOW higher on mean; MIXPRIOR higher on late_high.
+minimum target-match across exact-high targets,0.61328125,0.556640625,MIXPRIOR has higher floor because FLOW drops on late_high.
+support-p90 filtered target-match mean,0.4908854166666667,0.4264322916666667,Counts target-match only when nearest train-H is within heldout p90.
+support-p90 filtered target-match floor,0.44140625,0.380859375,Lower value marks target where inverse-design yield is weakest after support filtering.
+H support p90 distance mean,0.8967643757661184,3.026421864827475,Lower means fewer high-distance generated samples.
+success dynamic-cluster entropy fast_high,0.0,0.8484539199903588,Higher means success samples are less concentrated in the existing dynamic clusters.
+success dynamic-cluster entropy late_high,0.2238125551317005,0.9914485882350176,Higher means success samples are less concentrated in the existing dynamic clusters.
+success dynamic-cluster entropy very_fast,0.0,0.0,Higher means success samples are less concentrated in the existing dynamic clusters.
