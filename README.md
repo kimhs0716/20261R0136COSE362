@@ -110,14 +110,14 @@ target별로 보면 FLOW HTBRANCHPINNTRAJ는 fast-high와 very-fast target에서
 
 ```text
 20261R0136COSE362/
-|-- README.md
-|-- requirements.txt
-|-- src/
-|-- scripts/
-|-- notebooks/
-|-- reports/
-|-- results/
-`-- docs/
+├─ README.md
+├─ requirements.txt
+├─ src/
+├─ scripts/
+├─ notebooks/
+├─ reports/
+├─ results/
+└─ docs/
 ```
 
 ## 폴더 설명
